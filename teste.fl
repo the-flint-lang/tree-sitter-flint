@@ -1,0 +1,16 @@
+import os;
+
+struct Request {
+    url: string,
+    retry: int
+}
+
+fn fetch_data(req: Request) val {
+    stream (chunk in http_fetch(req.url)) {
+        print(chunk);
+    }
+    return null;
+}
+
+const req = { "url": $"[https://api.test](https://api.test)", "retry": 3 };
+fetch_data(req) ~> if_fail("Error on fetch!");

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "flint",
+      "camelcase": "Flint",
+      "title": "Flint",
+      "scope": "source.flint",
+      "file-types": [
+        "fl"
+      ],
+      "injection-regex": "^flint$",
+      "class-name": "TreeSitterFlint",
+      "queries": {
+        "highlights": "queries/flint/highlights.scm",
+        "folds": "queries/flint/folds.scm"
+      }
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "Apache-2.0",
+    "description": "Tree-sitter grammar for Flint: A fast, pipeline-oriented AOT language for systems scripts.",
+    "authors": [
+      {
+        "name": "lucaas-d3v",
+        "email": "lucas.workps@gmail.com",
+        "url": "https://github.com/lucaas-d3v"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/the-flint-lang/tree-sitter-flint",
+      "funding": "https://github.com/the-flint-lang"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "java": false,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
